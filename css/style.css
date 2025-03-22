@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+/*HEADER*/
+.header{
+    background-color: #E6E3E1;
+    display: flex;
+    /*делает текст не внизу картинке а справа после картинки*/
+    justify-content: space-between;
+    /*пространство между, одно слева другое справа*/
+    align-items: center;
+    /*делает текст по середине*/
+    padding: 5px 30px;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.1); /* Добавь тень для лучшего эффекта */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+}
+/*MENU*/
+.menu {
+    list-style: none;
+    /*убирает точки из списка*/
+    display: flex;
+    /*делает списк в линию*/
+    gap: 20px;
+    /*отступ между друг другом*/
+    margin: 0px;
+    padding: 0px;
+}
+.menu a {
+    /*per bonito li, menu*/
+    text-decoration: none;
+    /*убирает линию из списка*/
+    color: #95775A;
+    /*цвет букв*/
+    font-size: 18px;
+    /*размер букв*/
+    padding: 8px 12px;
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    transition: 0.5s;
+    /*когда наводишь на меню с разной скоростью появляеться задний фон слова*/
+}
+/*а КОГДА НАВОДИШЬ НА НЕГО */
+.menu a:hover {
+    /*когда наводишь на слово появляеться задний фон */
+    background-color: #D1C8B8;
+    color: #795A46;
+    border-radius: 50px;
+}
+
+/*ЛОГОТИП СВЕРХУ КАРТИНКА*/
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.logo {
+    transition: transform 0.3s ease-in-out;
+    /*ease-in-out.  двигаеться к тебе и от тебе, не в бок не вниз и тд */
+}
+
+/*КОГДА НАВОДИШЬ НА ЛОГОТИП*/
+
+.logo:hover {
+    transform: scale(1.2);
+    /*Amplia el logo un 20%*/
+}
+/*НИЖЕ ШАПКИ ЕСТЬ БАНЕР С ФОТО И ТЕКСТОМ H1 ИЗМЕНЕНИЯ В ЗАГОЛОВКЕ*/
+
+/*ВЕСЬ БАНЕР*/
+
+/*Ens referim els titols h1 de dins la classe banner*/
+.banner {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background: url("../img/ventana6.jpg") no-repeat center/cover;
+    display: flex;
+    align-items:baseline;
+    justify-content:center; /* Центрируем содержимое */
+    padding: 0px;
+}
+.h1banner{
+    font-family: "mario";
+    font-weight: bold;
+    font-size: 70px;
+    margin-bottom: 20px;
+    position: absolute;
+    margin-top: 100px;
+    /*по середине */
+    width: 90%;
+    color: rgb(238, 247, 255);
+}
+
+
+.image-banner {
+    position: absolute;
+    right: 9%;
+    bottom: 0px;
+}
+
+.image-banner img {
+    width: 340px;
+    height: auto;
+}
+
+/*КНОПКА*/
+.banner a{
+    color: #E6E3E1;
+    /*Juga слово белое*/
+    border: 2px solid #E6E3E1;
+    /*окантовка кнопки линия сплошная 2 пикселей белого цвета*/
+    padding: 10px 20px;
+    /*слово внутри кнопки отступ от окантовки*/
+    text-align: center;
+    text-decoration: none;
+    /*убирает нижнюю линию */
+    border-radius: 30px;
+    /*закругление углов*/
+    position: absolute;
+    bottom: 5px;
+    /*выравниваем */
+}
+/*КНОПКА*/
+.banner a:hover {
+    background-color: #E6E3E1;
+    /*закрашивает полностью кнопку в белый*/
+    color: rgb(123, 123, 123);
+    /*меняет цвет текста на черный*/
+ }
+/*КОЛОНКИ С ПЕРСОНАЖАМИ И ТЕКСТОМ*/
+
+
+/*Estils per crear les tres columnes*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 3fr));
+    /*repeat повторять, 3fr сколько колонок */
+    padding: 30px 0;
+    background-color: #E6E3E1;
+    width: 100%;
+}
+
+.grid-item {
+    text-align: center;
+    align-items: center;
+}
+
+.grid-container img{
+    box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#check{
+    display: none;
+}
+.checkbtn{
+    display: none;/* no vull sandwitch que es vegi en versio escritori*/
+    font-size: 30px;
+    color: aliceblue;
+    float: right;
+    line-height: 80px; /*El centrem al mig del contenidor*/
+    margin-right: 40px;
+    cursor: pointer; /*quan passem per sobre del sandwitch surti una ma i no una fletxa*/
+}
+/*SOBRE MI*/
+/* SOBRE MI */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.flex-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Чтобы текст не растягивался */
+}
+
+.flex-container img {
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.flex-container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 80px;
+}
+
+.flex h1 {
+    font-size: 19px;
+    line-height: 1.5;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+}
+
+.flex p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: "Quicksand", sans-serif;
+}
+#name{
+    font-family: "Alex Brush", cursive;
+    font-size: 20px;
+}
+
+
+/* Стили для выпадающего меню */
+
+@media (max-width: 952px) { /* ПЛАНШЕТЫ TABLET*/
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image-banner img {
+        width: 300px;
+    }
+    .banner{
+        display:grid;
+    }
+}
+
+@media (max-width: 856px) { /* МОБИЛЬНЫЕ MOVIL */
+
+    .header {
+        padding: 5px 20px;
+        display: flex;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #E6E3E1;
+        top: 90px;
+        left: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        gap: 30px;
+        z-index: 10; /* Поверх всего */
+    }
+    .menu a {
+        /*per bonito li, menu*/
+        text-decoration: none;
+        /*убирает линию из списка*/
+        color: #95775A;
+        /*цвет букв*/
+        font-size: 25px;
+        /*размер букв*/
+        padding: 10px 20px;
+        box-shadow: none;
+        border-radius: none;
+        transition: 0.3s;
+        /*когда наводишь на меню с разной скоростью появляеться задний фон слова*/
+        line-height: 50px; /*ОТСТУП МЕЖДУ МЕНЮ*/
+    }
+   
+    .menu li a:hover {
+        /*когда наводишь на слово появляеться задний фон */
+        background: none;
+        background-color: none;
+        color: #795f4b;
+        transform: scale(1.2);
+        text-shadow: 1px 2px 1px #4f3e3166; /* Лёгкое свечение */
+        font-size: 30px;
+    }
+
+    #check:checked ~ .menu {
+        left: 0;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0px;
+    }
+
+    .image-banner img {
+        width: 260px;
+        position: relative;
+        display:flex;
+    }
+
+    .banner a {
+        font-size: 16px;
+        padding: 8px 16px;
+        /* КНОПКА ДОЛЖНА ОСТАВАТЬСЯ ВИДИМОЙ */
+        position: absolute;
+    }
+}
+
