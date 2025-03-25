@@ -75,14 +75,19 @@
 
 /*Ens referim els titols h1 de dins la classe banner*/
 .banner {
-    position: relative;
     width: 100%;
     height: 70vh;
     background: url("../img/ventana6.jpg") no-repeat center/cover;
+    position: relative;
+    /* Canvia per la teva imatge */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    align-items:baseline;
-    justify-content:center; /* Центрируем содержимое */
-    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 .h1banner{
     font-family: "mario";
